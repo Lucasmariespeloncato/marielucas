@@ -26,20 +26,46 @@
     <div class="container mx-auto px-4 py-8 max-w-2xl">
         
         <!-- Section d'accueil -->
-        <header class="text-center mb-12">
+        <header class="text-center mb-6">
             <h1 class="text-5xl font-bold text-brown mb-2">Marie & Lucas</h1>
             <p class="text-xl italic">Nous nous marions !</p>
-            <p class="mt-4 text-lg">Nous sommes ravis de vous inviter à célébrer notre union le</p>
-            <p class="text-2xl font-bold mt-2 text-brown">Samedi 19 Septembre 2026</p>
+            <p class="mt-2 text-lg">Nous sommes ravis de vous inviter à célébrer notre union le</p>
+            <p class="text-2xl font-bold mt-1 text-brown">Samedi 19 Septembre 2026</p>
         </header>
 
         <!-- Séparateur -->
-        <div class="w-24 h-px bg-brown mx-auto my-10"></div>
+        <div class="w-24 h-px bg-brown mx-auto my-6"></div>
+
+        <!-- Section du compte à rebours -->
+        <section class="mb-6 text-center">
+            <div id="countdown" class="flex justify-center space-x-2">
+                <div class="bg-white p-1 rounded-lg shadow-lg text-center w-14">
+                    <div id="days" class="text-lg font-bold text-brown">00</div>
+                    <div class="text-xs text-gray-500">Jours</div>
+                </div>
+                <div class="bg-white p-1 rounded-lg shadow-lg text-center w-14">
+                    <div id="hours" class="text-lg font-bold text-brown">00</div>
+                    <div class="text-xs text-gray-500">Heures</div>
+                </div>
+                <div class="bg-white p-1 rounded-lg shadow-lg text-center w-14">
+                    <div id="minutes" class="text-lg font-bold text-brown">00</div>
+                    <div class="text-xs text-gray-500">Minutes</div>
+                </div>
+                <div class="bg-white p-1 rounded-lg shadow-lg text-center w-14">
+                    <div id="seconds" class="text-lg font-bold text-brown">00</div>
+                    <div class="text-xs text-gray-500">Secondes</div>
+                </div>
+            </div>
+            <p id="countdown-message" class="text-xl italic text-brown mt-2 hidden">Le grand jour est arrivé !</p>
+        </section>
+
+        <!-- Séparateur -->
+        <div class="w-24 h-px bg-brown mx-auto my-6"></div>
         
         <!-- Programme de la journée -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center text-brown mb-6">Le Programme</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section class="mb-6">
+            <h2 class="text-3xl font-bold text-center text-brown mb-4">Le Programme</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-bold text-brown mb-2">15h00 - La cérémonie</h3>
                     <p class="text-gray-700">Mairie de Speloncato</p>
@@ -64,11 +90,45 @@
         </section>
 
         <!-- Séparateur -->
-        <div class="w-24 h-px bg-brown mx-auto my-10"></div>
+        <div class="w-24 h-px bg-brown mx-auto my-6"></div>
+
+        <!-- Section de confirmation de présence (RSVP) -->
+        <section class="mb-6">
+            <h2 class="text-3xl font-bold text-center text-brown mb-4">Confirmation de présence</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto">
+                <p class="text-gray-700 mb-4 text-center">Merci de nous confirmer votre présence avant le 1er mai 2026.</p>
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Votre nom :</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brown focus:ring-brown sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="presence" class="block text-sm font-medium text-gray-700">Serez-vous présent ?</label>
+                        <select id="presence" name="presence" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brown focus:ring-brown sm:text-sm">
+                            <option value="">Sélectionnez une option</option>
+                            <option value="oui">Oui, je serai là !</option>
+                            <option value="non">Non, je ne pourrai pas venir</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Un petit mot pour nous ? (facultatif)</label>
+                        <textarea id="message" name="message" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brown focus:ring-brown sm:text-sm"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="inline-block bg-white text-brown font-bold py-2 px-6 rounded-full shadow-lg border-2 border-brown hover:bg-gray-100 transition-colors">
+                            Confirmer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Séparateur -->
+        <div class="w-24 h-px bg-brown mx-auto my-6"></div>
 
         <!-- Informations pratiques -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center text-brown mb-6">Informations Pratiques</h2>
+        <section class="mb-6">
+            <h2 class="text-3xl font-bold text-center text-brown mb-4">Informations Pratiques</h2>
             <div class="space-y-6">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-bold text-brown mb-2">Hébergement</h3>
@@ -111,8 +171,41 @@
         </section>
 
         <!-- Séparateur -->
-        <div class="w-24 h-px bg-brown mx-auto my-10"></div>
+        <div class="w-24 h-px bg-brown mx-auto my-6"></div>
 
     </div>
+
+    <script>
+        // Définir la date de votre mariage (19 Septembre 2026 à 15h00)
+        const weddingDate = new Date("Sep 19, 2026 15:00:00").getTime();
+
+        // Mettre à jour le compte à rebours toutes les secondes
+        const countdownTimer = setInterval(function() {
+            // Obtenir la date et l'heure actuelles
+            const now = new Date().getTime();
+
+            // Trouver la distance entre maintenant et la date du mariage
+            const distance = weddingDate - now;
+
+            // Calculer les jours, heures, minutes et secondes
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Afficher les résultats dans les éléments HTML
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // Si le compte à rebours est terminé
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("countdown-message").classList.remove("hidden");
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
